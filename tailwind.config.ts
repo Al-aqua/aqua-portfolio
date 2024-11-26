@@ -5,14 +5,33 @@ export default {
 
 	theme: {
 		colors: {
-			text: '#f5f9fa',
-			background: '#0A0D0D',
-			primary: '#05696B',
-			secondary: '#4B515C',
-			accent: '#878A9D'
+			text: '#f1f2f3',
+			background: '#000a0c',
+			primary: '#06C0DD',
+			secondary: '#dcece7',
+			accent: '#6ea8b3'
 		},
-		extend: {}
+
+		extend: {
+			fontFamily: {
+				yatra: ['"Yatra One"', 'cursive'],
+				lora: ['Lora', 'serif']
+			}
+		}
 	},
 
-	plugins: []
+	plugins: [require('daisyui')],
+	daisyui: {
+		themes: [
+			{
+				myTheme: {
+					primary: '#06C0DD',
+					secondary: '#dcece7',
+					accent: '#6ea8b3',
+					neutral: '#00404d',
+					'base-100': '#000a0c'
+				}
+			}
+		]
+	}
 } satisfies Config;
